@@ -48,7 +48,7 @@ export const socials: SocialLink[] = [
     href: "https://linkedin.com/in/rianikha-rianikha",
     icon: Linkedin,
   },
-  { label: "GitHub", href: "https://github.com/", icon: Github },
+  { label: "GitHub", href: "https://github.com/RainenterMudin", icon: Github },
   { label: "WhatsApp", href: "https://wa.me/6281214408175", icon: Phone },
   { label: "Email", href: "mailto:rianikhamudin152@gmail.com", icon: Mail },
 ];
