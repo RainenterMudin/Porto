@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden"
+      className="relative overflow-hidden pb-16 pt-28 sm:flex sm:min-h-dvh sm:items-center sm:pb-0 sm:pt-0"
     >
       {/* Decorative gradient blobs */}
       <div
@@ -20,7 +20,7 @@ export function Hero() {
         className="pointer-events-none absolute bottom-0 right-1/4 h-72 w-72 animate-float rounded-full bg-fuchsia-400/20 blur-3xl [animation-delay:2s] dark:bg-fuchsia-700/20"
       />
 
-      <div className="mx-auto w-full max-w-5xl px-6 pt-16">
+      <div className="mx-auto w-full max-w-5xl px-6 sm:pt-16">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ export function Hero() {
       <a
         href="#about"
         aria-label="Scroll ke bawah"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-400 transition hover:text-brand-500"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-zinc-400 transition hover:text-brand-500 sm:block"
       >
         <ArrowDown className="h-5 w-5 animate-bounce" />
       </a>
