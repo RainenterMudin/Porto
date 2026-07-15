@@ -62,10 +62,10 @@ export function Hero() {
           className="mt-8 flex flex-wrap items-center gap-3"
         >
           <a
-            href="#projects"
+            href="#contact"
             className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700"
           >
-            Lihat Proyek
+            Hubungi Saya
           </a>
           <a
             href={profile.resumeUrl}

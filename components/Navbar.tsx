@@ -10,7 +10,7 @@ const links = [
   { label: "Keahlian", href: "/#skills" },
   { label: "Pengalaman", href: "/#experience" },
   { label: "Pendidikan", href: "/#education" },
-  { label: "Proyek", href: "/#projects" },
+  // { label: "Proyek", href: "/#projects" }, // sementara disembunyikan
   { label: "Kontak", href: "/#contact" },
 ];
 
