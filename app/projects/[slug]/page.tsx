@@ -7,7 +7,6 @@ import {
   Calendar,
   CheckCircle2,
   ExternalLink,
-  Github,
   User,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -95,6 +94,7 @@ export default async function ProjectPage({
               Lihat Demo
             </a>
           )}
+          {/* Tombol "Kode Sumber" sementara disembunyikan — uncomment untuk menampilkan lagi
           {project.repoUrl && (
             <a
               href={project.repoUrl}
@@ -105,7 +105,7 @@ export default async function ProjectPage({
               <Github className="h-4 w-4" />
               Kode Sumber
             </a>
-          )}
+          )} */}
         </div>
 
         {/* Overview */}

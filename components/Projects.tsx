@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink, Github, Star } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { projects } from "@/lib/data";
 
@@ -11,12 +11,14 @@ export function Projects() {
       </Reveal>
       <Reveal delay={0.05}>
         <p className="section-subtitle">
-          Beberapa proyek yang paling saya banggakan. Klik untuk melihat detail.
+          Beberapa proyek yang saya kerjakan. Klik untuk melihat detail.
         </p>
       </Reveal>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((p, i) => (
+        {projects
+          .filter((p) => !p.hidden)
+          .map((p, i) => (
           <Reveal key={p.slug} delay={i * 0.05}>
             <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-brand-700">
               {/* Cover visual */}
@@ -27,12 +29,6 @@ export function Projects() {
                 <span className="text-2xl font-extrabold text-white drop-shadow">
                   {p.title}
                 </span>
-                {p.featured && (
-                  <span className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-xs font-medium text-amber-700 backdrop-blur">
-                    <Star className="h-3 w-3 fill-current" />
-                    Unggulan
-                  </span>
-                )}
                 <span className="absolute right-4 bottom-4 rounded-full bg-white/20 p-1.5 text-white transition group-hover:bg-white/30">
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
@@ -73,17 +69,6 @@ export function Projects() {
                     Lihat detail
                     <ArrowUpRight className="h-4 w-4" />
                   </Link>
-                  {p.repoUrl && (
-                    <a
-                      href={p.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                    >
-                      <Github className="h-4 w-4" />
-                      Kode
-                    </a>
-                  )}
                   {p.liveUrl && (
                     <a
                       href={p.liveUrl}
